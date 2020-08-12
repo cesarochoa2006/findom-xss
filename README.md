@@ -1,54 +1,35 @@
 # FinDOM-XSS
 
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwisiswanto/findom-xss/issues)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/cesarochoa2006/findom-xss/issues)
 
 
-FinDOM-XSS is a tool that allows you to finding for possible and/ potential DOM based XSS vulnerability in a fast manner.
+FinDOM-XSS is a tool that allows you to finding for possible and/ potential DOM based XSS vulnerability in a fast manner with Docker. This is a prebuilt docker ready utility from [FinDom-XSS](https://github.com/dwisiswant0/findom-xss)
 
 <img src="https://user-images.githubusercontent.com/25837540/79048310-7888af00-7c46-11ea-9133-5063cbd3580d.png" alt="findom-xss" width="750">
 
 ---
-
-### Installation
-
-```
-$ git clone https://github.com/dwisiswant0/findom-xss.git
-```
-
-**Dependencies:** [LinkFinder](https://github.com/GerbenJavado/LinkFinder)
-
-### Configuration
-
-Change the value of `LINKFINDER` variable _[(on line 3)](https://github.com/dwisiswant0/findom-xss/blob/master/findom-xss.sh#L3)_ with your main LinkFinder file.
+**Dependencies:** Docker
 
 ### Usage
 
 To run the tool on a target, just use the following command.
 ```
-$ ./findom-xss.sh https://target.host/about-us.html
+$ docker run --rm cesarochoa2006/findom-xss https://target.host/about-us.html
 ```
-
 This will run the tool against `target.host`.
-
-
-URLs can also be piped to findom-xss and scan on them. For example:
 ```
-$ cat urls.txt | ./findom-xss.sh
+$ docker run --rm -v $(pwd)/results/:/app/results cesarochoa2006/findom-xss   https://target.host/about-us.html
 ```
-
-The second argument can be used to specify an output file.
+This will run the FinDom-XSS utility with a results folder created at current location, which is not mandatory. 
 ```
-$ ./findom-xss.sh https://target.host/about-us.html /path/to/output.txt
+As the original FinDom-XSS, The second argument can be used to specify an output file, created at results folder.
 ```
-
-By default, output will be stored in the `results/` directory in the repository with `target.host.txt` name.
-
+$docker run --rm -v $(pwd)/results/:/app/results cesarochoa2006/findom-xss https://target.host/about-us.html /app/results/output.txt
+```
 ### License
 
 **FinDOM-XSS** is licensed under the Apache. Take a look at the [LICENSE](https://github.com/dwisiswant0/findom-xss/blob/master/LICENSE) for more information.
 
 ### Thanks
 
-- [@dark_warlord14](https://twitter.com/dark_warlord14) - Inspired by the JSScanner tool, that's why this tool was made.
-- [@aslanewre](https://twitter.com/aslanewre) - With possible patterns.
-- [All Contributors](../../graphs/contributors)
+- [@dwisiswant0](https://github.com/dwisiswant0) for creating FinDom-XSS and all contributors within them. 
