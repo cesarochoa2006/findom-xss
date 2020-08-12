@@ -1,13 +1,13 @@
 #!/bin/bash
 
-LINKFINDER="/home/dw1/Tools/LinkFinder/linkfinder.py"
+LINKFINDER="/app/LinkFinder/linkfinder.py"
 
 echo -en "\033[0;35m"
 echo "  ___ _      ___   ___  __  __   __  _____ ___ ";
 echo " | __(_)_ _ |   \ / _ \|  \/  |__\ \/ / __/ __|";
 echo " | _|| | ' \| |) | (_) | |\/| |___>  <\__ \__ \\";
 echo " |_| |_|_||_|___/ \___/|_|  |_|  /_/\_\___/___/";
-echo -en "\n dw1@noobsec.org\n --"
+echo -en "\n cesarochoa2006@hotmail.com\n --"
 echo -en "\n Find for Possible DOM Based XSS Vulnerability"
 echo -e "\033[0m"
 
@@ -66,7 +66,7 @@ _main() {
 
 		wait
 
-		[[ -f "${OUTPUT}" ]] && echo -e "\n\033[1mOutput saved into ${OUTPUT}\033[0m\n-----" || echo -e "\n\033[0;33mFound nothing. ¯\_(ツ)_/¯\033[0m\n-----"
+		#[[ -f "${OUTPUT}" ]] && echo -e "\n\033[1mOutput saved into ${OUTPUT}\033[0m\n-----" || echo -e "\n\033[0;33mFound nothing. ¯\_(ツ)_/¯\033[0m\n-----"
 	}
 }
 
