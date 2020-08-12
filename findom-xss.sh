@@ -66,7 +66,7 @@ _main() {
 
 		wait
 
-		#[[ -f "${OUTPUT}" ]] && echo -e "\n\033[1mOutput saved into ${OUTPUT}\033[0m\n-----" || echo -e "\n\033[0;33mFound nothing. ¯\_(ツ)_/¯\033[0m\n-----"
+		[[ -f "${OUTPUT}" ]] && echo -e "\n\033[1mOutput saved\033[0m\n-----" || echo -e "\n\033[0;33mFound nothing. ¯\_(ツ)_/¯\033[0m\n-----"
 	}
 }
 
