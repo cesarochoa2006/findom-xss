@@ -1,0 +1,4 @@
+[submodule "LinkFinder"]
+	path = LinkFinder
+	url = https://github.com/GerbenJavado/LinkFinder.git
+	
