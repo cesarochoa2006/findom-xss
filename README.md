@@ -21,7 +21,6 @@ This will run the tool against `target.host`.
 $ docker run --rm -v $(pwd)/results/:/app/results cesarochoa2006/findom-xss   https://target.host/about-us.html
 ```
 This will run the FinDom-XSS utility with a results folder created at current location, which is not mandatory. 
-```
 As the original FinDom-XSS, The second argument can be used to specify an output file, created at results folder.
 ```
 $docker run --rm -v $(pwd)/results/:/app/results cesarochoa2006/findom-xss https://target.host/about-us.html /app/results/output.txt
